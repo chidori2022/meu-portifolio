@@ -15,7 +15,9 @@ export const portfolioData = {
     description: "Ajudo empresas a automatizarem rotinas, integrarem sistemas legados e garantirem a segurança da informação de ponta a ponta.",
     email: "sabre.sombra@gmail.com",
     linkedin: "https://www.linkedin.com/in/marceloramoswinter",
-    github: "https://github.com/chidori2022"
+    github: "https://github.com/chidori2022",
+    whatsapp: "https://wa.me/5551998182838",
+    phoneDisplay: "+55 51 99818-2838",
   },
   services: [
     {
