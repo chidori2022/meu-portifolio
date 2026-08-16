@@ -82,64 +82,56 @@ export const portfolioData = {
   projects: [
     {
       title: "Plataforma Local de IA & Agentes",
-      company: "Dongwon Brasil",
-      period: "2026",
+      period: "Atualmente",
       function: "Orquestração de LLM, RAG e agentes de domínio",
       description: "Serviço chatgpt-local em Go com chat, RAG sobre Qdrant e agentes isolados por domínio (RH, MySQL, documentação, EPI, redes e Zabbix via MCP). Cada agent_* possui contrato HTTP próprio; a plataforma consulta bases e documentos sem depender de operação manual.",
       tools: ["Go 1.23", "Qdrant", "RAG / Embeddings", "OpenAI", "MCP MySQL", "MCP Zabbix", "Docker"]
     },
     {
       title: "Bot WhatsApp (Meta Cloud API)",
-      company: "Dongwon Brasil",
-      period: "2026",
+      period: "Atualmente",
       function: "Canal de atendimento e notificação via WhatsApp",
       description: "Webhook Meta (X-Hub-Signature-256) em Go: mensagens entrantes passam pelo LLM e seguem para o bridge de RH. Linha dedicada wa-bot-epi (observe/notify). Allowlist de telefones, JWT entre portal e agents, e logs no monitor do portal.",
       tools: ["Go 1.23", "Meta WhatsApp API", "Webhook HMAC", "JWT", "Agent_RH", "Docker"]
     },
     {
       title: "Monitoramento Zabbix & Grafana",
-      company: "Dongwon Brasil",
-      period: "2021 - 2026",
+      period: "Atualmente",
       function: "Observabilidade de infraestrutura e alertas operacionais",
       description: "Stack Zabbix Server/Web + Grafana no Compose corporativo, com MIBs (ex.: Sophos) e provisioning via automation. Dashboards e alertas alimentam a operação; o agent_zabbix e o canal WhatsApp consomem eventos de monitoramento em modo leitura.",
       tools: ["Zabbix", "Grafana", "SNMP / MIBs", "Docker Compose", "MySQL (zabbix)", "Automation Python"]
     },
     {
       title: "Visão Computacional & Biometria",
-      company: "Dongwon Brasil",
-      period: "2025 - 2026",
+      period: "Atualmente",
       function: "Identificação facial e streaming de câmeras na planta",
       description: "Pipeline RTSP → HLS/WHEP (MediaMTX): face-api (InsightFace buffalo_l) com load balancer e ~13 réplicas, person-detector (MediaPipe/HOG) e rtsp-identify em serviços separados (capture/detect/identify/API).",
       tools: ["Python FastAPI", "InsightFace", "MediaPipe", "MediaMTX", "Nginx LB", "Docker"]
     },
     {
       title: "Portal Corporativo (www2)",
-      company: "Dongwon Brasil",
-      period: "2021 - 2026",
+      period: "Atualmente",
       function: "Aplicação web interna com SSO e módulos de negócio",
       description: "Portal PHP 8.3 (Nginx + SPNEGO/Kerberos AD) com módulos RH, Qualidade, Logística, Produção, Financeiro, Câmeras, Face, Chamados e Conferência. Persistência MySQL (mysqli), ACL por módulo e perímetro TLS interno vs face pública restrita (Sophos).",
       tools: ["PHP 8.3", "Nginx", "AD / Kerberos", "MySQL 8.4", "Docker", "JWT portal→agents"]
     },
     {
       title: "RPA Protheus (Chrome CDP)",
-      company: "Dongwon / Automação",
-      period: "2026",
+      period: "Atualmente",
       function: "Automação de operações no ERP Protheus WebApp",
       description: "Stack protheus-rpa (Python FastAPI + Playwright) com bridge CDP e cliente Windows tray WinForms (.NET 8) para Chrome CDP e túnel SSH reverso, eliminando operação manual de OPs no Protheus.",
       tools: [".NET 8 WinForms", "Chrome CDP", "Python FastAPI", "Playwright", "SSH reverso"]
     },
     {
       title: "API Biometria Control iD",
-      company: "Projetos em Destaque",
-      period: "2026",
+      period: "Atualmente",
       function: "Leitura biométrica local via HTTP",
       description: "API HTTP local em .NET 8 (x86) usando SDK CIDBio para leitores Control iD, expondo enroll/identify para integração com sistemas internos.",
       tools: [".NET 8 x86", "SDK CIDBio", "Control iD", "API HTTP local"]
     },
     {
       title: "Integração CLP Melsec",
-      company: "Automação Industrial",
-      period: "2025",
+      period: "Atualmente",
       function: "Comunicação com CLPs no chão de fábrica",
       description: "Integrações de baixo nível com Controladores Lógicos Programáveis Melsec (Mitsubishi), sincronizando dados industriais via Python/C#.",
       tools: ["Python", "C#", "CLP Melsec", "IoT industrial"]

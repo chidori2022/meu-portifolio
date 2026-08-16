@@ -225,18 +225,18 @@ export default function Home() {
                   <div className="relative z-10">
                     <div className="mb-6 flex flex-col sm:flex-row sm:items-start justify-between gap-4">
                       <div>
-                        <span className="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-3 flex items-center gap-2">
-                          <Activity className="w-4 h-4" />
-                          {project.company}
-                        </span>
                         <h4 className="text-2xl font-bold text-slate-900 dark:text-white leading-tight mb-2">{project.title}</h4>
-                        {"function" in project && project.function ? (
+                        {project.function ? (
                           <p className="text-sm font-medium text-slate-500 dark:text-slate-400 mb-2">
                             Função: {project.function}
                           </p>
                         ) : null}
                       </div>
-                      <span className="text-xs font-mono font-medium text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-950/50 px-4 py-1.5 rounded-full border border-blue-100 dark:border-blue-500/20 whitespace-nowrap shadow-sm dark:shadow-[0_0_10px_rgba(59,130,246,0.1)]">
+                      <span className="text-xs font-mono font-medium text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/50 px-4 py-1.5 rounded-full border border-emerald-100 dark:border-emerald-500/20 whitespace-nowrap shadow-sm dark:shadow-[0_0_10px_rgba(16,185,129,0.15)] inline-flex items-center gap-2">
+                        <span className="relative flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                        </span>
                         {project.period}
                       </span>
                     </div>
