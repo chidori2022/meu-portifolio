@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* next-themes usa class="dark" no <html>; sem isso o dark: só segue o SO */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
