@@ -1,7 +1,7 @@
 "use client";
 
 import { portfolioData } from "@/data/portfolio";
-import { Code2, Briefcase, Mail, TerminalSquare, CheckCircle2, ChevronRight, Activity } from "lucide-react";
+import { Code2, Briefcase, TerminalSquare, CheckCircle2, ChevronRight, Activity } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
@@ -73,11 +73,6 @@ export default function Home() {
                   <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
                   <SiWhatsapp className="w-5 h-5 relative z-10 group-hover:scale-110 transition-transform duration-300" />
                   <span className="relative z-10">WhatsApp</span>
-                </a>
-                <a href={`mailto:${hero.email}`} className="w-full sm:w-auto group relative inline-flex justify-center items-center gap-2 bg-blue-600 hover:bg-blue-700 dark:hover:bg-blue-500 text-white px-8 py-3.5 md:py-4 rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg dark:shadow-[0_0_20px_rgba(37,99,235,0.3)] dark:hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] overflow-hidden">
-                  <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
-                  <Mail className="w-5 h-5 relative z-10 group-hover:scale-110 transition-transform duration-300" />
-                  <span className="relative z-10">Iniciar Projeto</span>
                 </a>
                 <a href={hero.linkedin} target="_blank" rel="noreferrer" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-white hover:bg-slate-50 dark:bg-slate-900/50 dark:hover:bg-slate-800 text-slate-700 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white px-8 py-3.5 md:py-4 rounded-lg font-medium transition-all duration-300 border border-slate-200 dark:border-slate-700/50 dark:hover:border-slate-500 shadow-sm backdrop-blur-sm group">
                   <Briefcase className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
