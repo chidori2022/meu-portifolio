@@ -9,7 +9,7 @@ import { useRef } from "react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
-  const { hero, about, services, skills, projects, experience } = portfolioData;
+  const { hero, services, skills, projects, experience } = portfolioData;
   const containerRef = useRef<HTMLDivElement>(null);
   
   // Efeito Parallax sutil no fundo
@@ -113,7 +113,7 @@ export default function Home() {
               Perfil Arquitetural
             </h3>
             <p className="text-lg text-slate-700 dark:text-slate-400 leading-relaxed font-light">
-              {about}
+              {hero.description}
             </p>
           </motion.div>
         </section>
