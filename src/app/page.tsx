@@ -50,7 +50,7 @@ export default function Home() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
                 </span>
-                <span className="tracking-wide uppercase text-[10px] md:text-xs font-mono">Consultor PJ • Disponível</span>
+                <span className="tracking-wide uppercase text-[10px] md:text-xs font-mono">Consultor PJ</span>
               </div>
               
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4 text-slate-900 dark:text-white leading-tight">
