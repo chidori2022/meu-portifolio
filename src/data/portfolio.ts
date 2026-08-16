@@ -109,7 +109,7 @@ export const portfolioData = {
       tools: ["Python FastAPI", "InsightFace", "MediaPipe", "MediaMTX", "Nginx LB", "Docker"]
     },
     {
-      title: "Portal Corporativo (www2)",
+      title: "Portal Corporativo (Intranet)",
       period: "Atualmente",
       function: "Aplicação web interna com SSO e módulos de negócio",
       description: "Portal PHP 8.3 (Nginx + SPNEGO/Kerberos AD) com módulos RH, Qualidade, Logística, Produção, Financeiro, Câmeras, Face, Chamados e Conferência. Persistência MySQL (mysqli), ACL por módulo e perímetro TLS interno vs face pública restrita (Sophos).",
