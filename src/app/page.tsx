@@ -18,7 +18,7 @@ export default function Home() {
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-slate-50 dark:bg-[#0a0f1c] text-slate-900 dark:text-slate-300 font-sans selection:bg-blue-600 selection:text-white overflow-x-hidden overflow-y-visible relative transition-colors duration-500 print:overflow-visible print:bg-white print:text-slate-900">
+    <div ref={containerRef} className="min-h-screen bg-slate-50 dark:bg-[#0a0f1c] text-slate-900 dark:text-slate-300 font-sans selection:bg-blue-600 selection:text-white overflow-x-hidden overflow-y-visible relative transition-colors duration-500 print:overflow-visible print:bg-[#0a0f1c] print:text-slate-300">
       
       {/* GRID DE ENGENHARIA (Background Sutil) - Muda a cor dependendo do tema */}
       <div className="pointer-events-none absolute inset-0 z-0 opacity-[0.05] print:hidden dark:opacity-[0.03]" 
@@ -45,7 +45,7 @@ export default function Home() {
       <div className="absolute top-6 right-6 z-50 print:hidden md:top-8 md:right-8">
         <ThemeToggle />
       </div>
-      <header className="relative z-10 pt-24 md:pt-32 pb-16 md:pb-24 border-b border-slate-200 dark:border-white/5 bg-white/90 dark:bg-[#0a0f1c]/90 print:bg-white transition-colors duration-500">
+      <header className="relative z-10 pt-24 md:pt-32 pb-16 md:pb-24 border-b border-slate-200 dark:border-white/5 bg-white/90 dark:bg-[#0a0f1c]/90 print:bg-[#0a0f1c] transition-colors duration-500">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <motion.div 
             initial={{ opacity: 1, y: 0 }}
@@ -120,7 +120,7 @@ export default function Home() {
             initial={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="bg-white/90 dark:bg-slate-900/80 p-8 md:p-12 rounded-3xl border border-slate-200 dark:border-white/5 shadow-xl dark:shadow-2xl relative overflow-hidden group transition-colors duration-500 print:bg-white"
+            className="bg-white/90 dark:bg-slate-900/80 p-8 md:p-12 rounded-3xl border border-slate-200 dark:border-white/5 shadow-xl dark:shadow-2xl relative overflow-hidden group transition-colors duration-500 print:bg-slate-900"
           >
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-purple-600 opacity-20 dark:opacity-50 group-hover:opacity-100 transition-opacity"></div>
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight mb-6 flex items-center gap-3">

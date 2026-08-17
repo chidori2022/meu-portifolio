@@ -27,44 +27,35 @@
   100% { transform: translate(0px, 0px) scale(1); }
 }
 
-/* Chrome PDF (Ctrl+P e conversores) ignora fundo escuro, corta overflow
-   e falha com mix-blend/blur/opacity:0 do Framer Motion. */
+/* Chrome PDF (Ctrl+P e conversores): tema escuro, sem corte de overflow
+   e sem opacity:0 do Framer Motion. print-color-adjust faz o fundo sair no papel. */
 @media print {
   @page {
     size: A4;
     margin: 12mm;
+    background: #0a0f1c;
   }
 
   html {
-    color-scheme: light !important;
+    color-scheme: dark !important;
   }
 
   html,
   body {
-    background: #fff !important;
-    color: #0f172a !important;
+    background: #0a0f1c !important;
+    color: #cbd5e1 !important;
     height: auto !important;
     overflow: visible !important;
   }
 
   * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
     animation: none !important;
     transition: none !important;
     filter: none !important;
     backdrop-filter: none !important;
     mix-blend-mode: normal !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  body,
-  body * {
-    color: #0f172a !important;
-    background-image: none !important;
-  }
-
-  a {
-    color: #1d4ed8 !important;
   }
 
   img {
