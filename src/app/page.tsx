@@ -72,7 +72,7 @@ export default function Home() {
                 {hero.description}
               </p>
               
-              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center md:justify-start gap-4">
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center md:justify-start gap-4 print:hidden">
                 <a
                   href={hero.whatsapp}
                   target="_blank"
@@ -91,6 +91,12 @@ export default function Home() {
                   <Code2 className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                   GitHub
                 </a>
+              </div>
+
+              <div className="hidden print:block text-left text-sm leading-relaxed text-slate-300">
+                <p className="mb-2 text-xs font-bold uppercase tracking-widest text-slate-400">Contato</p>
+                <p>WhatsApp: {hero.phoneDisplay}</p>
+                <p>LinkedIn: {hero.linkedin.replace(/^https?:\/\/(www\.)?/, "")}</p>
               </div>
             </div>
 
