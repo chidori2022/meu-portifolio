@@ -26,3 +26,57 @@
   66% { transform: translate(-20px, 20px) scale(0.9); }
   100% { transform: translate(0px, 0px) scale(1); }
 }
+
+/* Chrome PDF (Ctrl+P e conversores) ignora fundo escuro, corta overflow
+   e falha com mix-blend/blur/opacity:0 do Framer Motion. */
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  html {
+    color-scheme: light !important;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #0f172a !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  * {
+    animation: none !important;
+    transition: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+    mix-blend-mode: normal !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body,
+  body * {
+    color: #0f172a !important;
+    background-image: none !important;
+  }
+
+  a {
+    color: #1d4ed8 !important;
+  }
+
+  img {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Framer Motion deixa opacity:0 / translateY até o whileInView disparar */
+  [style*="opacity"],
+  [style*="transform"] {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+}
