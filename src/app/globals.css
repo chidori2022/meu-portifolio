@@ -97,20 +97,19 @@
   a[href]::after {
     content: none !important;
   }
-}
 
-/* Vale no Ctrl+P e no to-pdf (mídia screen + page.pdf) */
-.print-break-before {
-  break-before: page;
-  page-break-before: always;
-}
+  .print-break-before {
+    break-before: page;
+    page-break-before: always;
+  }
 
-.print-keep-together {
-  break-inside: avoid;
-  page-break-inside: avoid;
-}
+  .print-keep-together {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
 
-.print-card {
-  break-inside: avoid;
-  page-break-inside: avoid;
+  .print-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
 }

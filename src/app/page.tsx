@@ -5,20 +5,18 @@ import { Code2, Briefcase, ChevronRight, Activity } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
 
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
   const { hero, services, skills, projects, experience } = portfolioData;
-  const containerRef = useRef<HTMLDivElement>(null);
-  
-  // Efeito Parallax sutil no fundo
-  const { scrollYProgress } = useScroll({ target: containerRef });
+
+  // Parallax no scroll da janela (não do container — evita scroll duplo)
+  const { scrollYProgress } = useScroll();
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-slate-50 dark:bg-[#0a0f1c] text-slate-900 dark:text-slate-300 font-sans selection:bg-blue-600 selection:text-white overflow-x-hidden overflow-y-visible relative transition-colors duration-500 print:overflow-visible print:bg-[#0a0f1c] print:text-slate-300">
+    <div className="relative min-h-dvh overflow-x-clip bg-slate-50 text-slate-900 font-sans selection:bg-blue-600 selection:text-white transition-colors duration-500 dark:bg-[#0a0f1c] dark:text-slate-300 print:overflow-visible print:bg-[#0a0f1c] print:text-slate-300">
       
       {/* GRID DE ENGENHARIA (Background Sutil) - Muda a cor dependendo do tema */}
       <div className="pointer-events-none absolute inset-0 z-0 opacity-[0.05] print:hidden dark:opacity-[0.03]" 

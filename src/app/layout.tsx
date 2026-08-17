@@ -26,10 +26,10 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased print:h-auto`}
+      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-slate-50 dark:bg-[#0a0f1c] transition-colors duration-500 print:bg-[#0a0f1c] print:h-auto print:overflow-visible">
+      <body className="min-h-dvh overflow-x-clip bg-slate-50 transition-colors duration-500 dark:bg-[#0a0f1c] print:bg-[#0a0f1c] print:overflow-visible">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
