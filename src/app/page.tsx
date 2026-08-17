@@ -1,7 +1,7 @@
 "use client";
 
 import { portfolioData } from "@/data/portfolio";
-import { Code2, Briefcase, TerminalSquare, CheckCircle2, ChevronRight, Activity } from "lucide-react";
+import { Code2, Briefcase, ChevronRight, Activity } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";

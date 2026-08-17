@@ -1,7 +1,7 @@
-import { Code2, Server, Cog, ShieldCheck, Database, ServerCrash, Network, Bot, BrainCircuit, Terminal, Blocks, Braces, Cloud, HardDrive, Shield } from "lucide-react";
+import { Code2, Server, Cog, ShieldCheck, Database, ServerCrash, Bot, Blocks } from "lucide-react";
 import { 
-  SiDotnet, SiPhp, SiPython, SiFastapi, SiNodedotjs, SiGo,
-  SiReact, SiNextdotjs, SiFlutter, SiTypescript, SiTailwindcss, SiBootstrap,
+  SiPhp, SiPython, SiFastapi, SiNodedotjs, SiGo,
+  SiReact, SiFlutter, SiTypescript, SiTailwindcss, SiBootstrap,
   SiDocker, SiLinux, SiGrafana,
   SiMysql, SiPostgresql
 } from "react-icons/si";
