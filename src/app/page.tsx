@@ -112,7 +112,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-20 md:py-32 space-y-24 md:space-y-40">
+      <main className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-20 md:py-32 space-y-24 md:space-y-40 print:space-y-0 print:py-4">
         
         {/* RESUMO B2B / ABOUT */}
         <section>
@@ -134,13 +134,13 @@ export default function Home() {
         </section>
 
         {/* SERVIÇOS B2B */}
-        <section>
-          <div className="mb-16">
+        <section className="print-break-before print-keep-together">
+          <div className="mb-16 print:mb-6">
             <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mb-4">Soluções Especializadas</h3>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 dark:from-blue-500 to-transparent rounded-full"></div>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 print:grid-cols-3">
             {services.map((service, index) => (
               <motion.div 
                 key={index}
@@ -161,13 +161,13 @@ export default function Home() {
         </section>
 
         {/* STACK TECNOLÓGICA */}
-        <section>
-          <div className="mb-16">
+        <section className="print-break-before print-keep-together">
+          <div className="mb-16 print:mb-6">
             <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mb-4">Ecossistema & Stack</h3>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-600 dark:from-purple-500 to-transparent rounded-full"></div>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-x-16 gap-y-12">
+          <div className="grid md:grid-cols-2 gap-x-16 gap-y-12 print:grid-cols-2 print:gap-y-8">
             {skills.map((skillGroup, index) => (
               <motion.div 
                 key={index}
@@ -194,8 +194,8 @@ export default function Home() {
         </section>
 
         {/* CASES DE SUCESSO / PROJETOS - ESTILO TIMELINE */}
-        <section>
-          <div className="mb-20">
+        <section className="print-break-before">
+          <div className="mb-20 print:mb-8">
             <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mb-4 flex items-center gap-4">
               Engenharia em Produção
               <span className="relative flex h-3 w-3">
@@ -215,7 +215,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="relative flex items-center justify-between md:justify-normal md:even:flex-row-reverse group"
+                className="relative flex items-center justify-between md:justify-normal md:even:flex-row-reverse group print-card"
               >
                 {/* TIMELINE DOT COM PULSE */}
                 <div className="flex items-center justify-center w-4 h-4 rounded-full bg-blue-500 dark:bg-blue-400 shadow-[0_0_10px_rgba(59,130,246,0.4)] dark:shadow-[0_0_20px_rgba(59,130,246,0.8)] shrink-0 md:order-1 md:group-even:-translate-x-1/2 md:group-odd:translate-x-1/2 absolute left-6 md:left-1/2 -translate-x-[7px] z-10 group-hover:scale-150 group-hover:bg-blue-600 dark:group-hover:bg-blue-300 transition-all duration-500 before:absolute before:inset-0 before:rounded-full before:border before:border-blue-500/50 dark:before:border-blue-400/50 before:animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
@@ -276,8 +276,8 @@ export default function Home() {
         </section>
 
         {/* EXPERIÊNCIA CORPORATIVA */}
-        <section>
-          <div className="mb-16">
+        <section className="print-break-before print-keep-together">
+          <div className="mb-16 print:mb-6">
             <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mb-4">Trajetória Corporativa</h3>
             <div className="w-24 h-1 bg-gradient-to-r from-indigo-600 dark:from-indigo-500 to-transparent rounded-full"></div>
           </div>
@@ -312,7 +312,7 @@ export default function Home() {
       </main>
 
       {/* FOOTER */}
-      <footer className="relative z-10 bg-slate-100 dark:bg-[#060913] text-slate-500 py-12 border-t border-slate-200 dark:border-white/5 mt-20 transition-colors duration-500">
+      <footer className="relative z-10 bg-slate-100 dark:bg-[#060913] text-slate-500 py-12 border-t border-slate-200 dark:border-white/5 mt-20 transition-colors duration-500 print:mt-8 print:py-6">
         <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-sm">© {new Date().getFullYear()} {hero.name}. Sistema online.</p>
           <p className="flex items-center gap-2 text-sm bg-white dark:bg-slate-900/50 px-4 py-2 rounded-full border border-slate-200 dark:border-white/5 shadow-sm dark:shadow-none">
